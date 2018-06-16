@@ -6,6 +6,7 @@ As i started playing Pen and Paper i came across the problem to keep my characte
 ## Current Features
 - Export Hero as JSON to save it on your own
 - Saving Hero into Browser Localstorage for persistence
+- Fully Responsive
 
 ## Development server
 
