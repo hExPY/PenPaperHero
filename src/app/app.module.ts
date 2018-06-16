@@ -5,19 +5,23 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { HomeComponent } from './home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ClipboardModule } from 'ngx-clipboard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
+import { SimpleNotificationsModule } from 'angular2-notifications';
+import { HeroCreateComponent } from './hero-create/hero-create.component';
+import { HeroExportComponent } from './hero-export/hero-export.component';
 
 const appRoutes: Routes = [
-  { path: '**', component: HomeComponent }
+  { path: 'export', component: HeroExportComponent },
+  { path: 'create', component: HeroCreateComponent },
+  { path: '**', redirectTo: "create" }
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HeroCreateComponent,
+    HeroExportComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -27,7 +31,7 @@ const appRoutes: Routes = [
     FormsModule,
     ClipboardModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    SimpleNotificationsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

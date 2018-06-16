@@ -1,0 +1,31 @@
+<div class="container mt-3">
+  <div class="card">
+    <div class="card-header">
+      Hero Details
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="row">
+          <div class="col">
+            <small class="form-text text-muted">Name</small>
+            <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.name" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter your Name">
+          </div>
+          <div class="col">
+            <small class="form-text text-muted">Gender</small>
+            <input (keyup)="onFormChange()"[(ngModel)]="this.hero.details.gender" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="What's your gender?">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <small class="form-text text-muted">Concept</small>
+            <input (keyup)="onFormChange()"[(ngModel)]="this.hero.details.concept" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="What's your concept?">
+          </div>
+          <div class="col">
+            <small class="form-text text-muted">Nationality</small>
+            <input (keyup)="onFormChange()"[(ngModel)]="this.hero.details.nationality" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="What's your nationality?">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
