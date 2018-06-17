@@ -24,8 +24,9 @@ export class HeroImportComponent implements OnInit {
     })
   }
   importHeroToStorage() {
+    let importedHero;
     try {
-      const importedHero = JSON.parse(this.importHeroField)
+      importedHero = JSON.parse(this.importHeroField)
     } catch (err){
       this.notificationsService.error("Import Error", "JSON invalid", {
         timeOut: 3000,

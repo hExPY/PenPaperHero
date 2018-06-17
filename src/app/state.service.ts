@@ -37,8 +37,9 @@ export class StateService {
   }
 
   loadHeroFromStorage() {
+    let tmpHero;
     try {
-      const tmpHero = JSON.parse(localStorage.getItem(this.localStorageFieldName));
+      tmpHero = JSON.parse(localStorage.getItem(this.localStorageFieldName));
     } catch (err) {
       console.log("loadHeroFromStorage - Storage Entry not found. creating empty one")
       this.saveHeroToStorage();
