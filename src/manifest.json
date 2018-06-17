@@ -6,7 +6,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",
-  "start_url": "create",
+  "start_url": "/",
   "icons": [{
       "src": "assets/icons/icon-72x72.png",
       "sizes": "72x72",
