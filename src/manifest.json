@@ -6,6 +6,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",
+  "lang": "en",
   "start_url": "/PenPaperHero/",
   "icons": [{
       "src": "assets/icons/icon-72x72.png",

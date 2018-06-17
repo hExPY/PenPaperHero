@@ -1,19 +1,27 @@
 {
-  "index": "/index.html",
+  "index": "/PenPaperHero/index.html",
   "assetGroups": [{
     "name": "app",
     "installMode": "prefetch",
+    "updateMode": "prefetch",
     "resources": {
       "files": [
-        "/favicon.ico",
-        "/index.html",
-        "/*.css",
-        "/*.js"
-      ]
+        "/PenPaperHero/favicon.ico",
+        "/PenPaperHero/index.html",
+        "/PenPaperHero/*.css",
+        "/PenPaperHero/*.js",
+        "/PenPaperHero/manifest.json"
+      ],
+      "versionedFiles": [
+        "/PenPaperHero/styles.*.css",
+        "/PenPaperHero/main.*.js",
+        "/PenPaperHero/polyfills.*.js",
+        "/PenPaperHero/runtime.*.js"
+      ],
     }
   }, {
     "name": "assets",
-    "installMode": "lazy",
+    "installMode": "prefetch",
     "updateMode": "prefetch",
     "resources": {
       "files": [
