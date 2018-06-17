@@ -10,14 +10,17 @@
         "/PenPaperHero/index.html",
         "/PenPaperHero/*.css",
         "/PenPaperHero/*.js",
-        "/PenPaperHero/manifest.json"
+        "/PenPaperHero/manifest.json",
+        "/PenPaperHero/create",
+        "/PenPaperHero/import",
+        "/PenPaperHero/export"
       ],
       "versionedFiles": [
         "/PenPaperHero/styles.*.css",
         "/PenPaperHero/main.*.js",
         "/PenPaperHero/polyfills.*.js",
         "/PenPaperHero/runtime.*.js"
-      ],
+      ]
     }
   }, {
     "name": "assets",
