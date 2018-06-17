@@ -1,4 +1,6 @@
-# PenPaper - Hero
+![Logo](static/logo.png)
+
+![Build Status](https://api.travis-ci.org/hExPY/PenPaperHero.svg?branch=master)
 
 ## Foreword
 
@@ -19,14 +21,13 @@ Currently i'am working on the [Savage Worlds](http://www.savage-run.de/download/
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Current State
-### Hero Creation
-![Image](static/create.png)
+Visit my [Github Page](https://hexpy.github.io/PenPaperHero/create) for current version.
 
-### Hero Export
-![Image](static/export.png)
-
-### Hero Import
-![Image](static/import.png)
 ## Credits
 
 - Navbar Icon via [LINK](https://hero-in-pixels.deviantart.com/art/West-dash-animation-176419267)
+- Logo via [LINK](https://textcraft.net/)
+- Loading Animation via [LINK](https://genbaku.deviantart.com/)
+
+## Special Thanks
+- to my Pen and Paper Group for this Idea

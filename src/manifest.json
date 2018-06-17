@@ -1,11 +1,11 @@
 {
   "name": "Pen & Paper Hero",
   "short_name": "PPHero",
-  "theme_color": "#1976d2",
+  "theme_color": "#563d7c",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "",
-  "start_url": "",
+  "start_url": "/create",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
