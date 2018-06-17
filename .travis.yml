@@ -9,7 +9,7 @@ branches:
   - master
 
 script:
-  - ng build --output-path dist --prod --base-href /PenPaperHero/
+  - ng build --output-path dist --prod --base-href https://hexpy.github.io/PenPaperHero/
   - cp dist/index.html dist/404.html
 
 deploy:
