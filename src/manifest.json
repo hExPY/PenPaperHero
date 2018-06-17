@@ -5,7 +5,7 @@
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "",
-  "start_url": "/create",
+  "start_url": "create",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
