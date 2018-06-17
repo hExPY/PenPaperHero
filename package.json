@@ -24,6 +24,7 @@
     "@angular/service-worker": "^6.0.3",
     "@ng-bootstrap/ng-bootstrap": "^2.0.0-alpha.0",
     "@ng-bootstrap/schematics": "^2.0.0-alpha.1",
+    "angular-cli-ghpages": "^0.5.2",
     "angular2-notifications": "^1.0.2",
     "bootstrap": "^4.0.0",
     "core-js": "^2.5.4",

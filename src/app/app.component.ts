@@ -12,7 +12,7 @@ import { StateService } from "./state.service";
 })
 export class AppComponent implements OnInit {
 
-  hero: {};
+  public hero: any;
 
   constructor(private state: StateService) { }
 

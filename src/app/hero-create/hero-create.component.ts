@@ -7,7 +7,7 @@ import { StateService } from "../state.service";
   styleUrls: ['./hero-create.component.css']
 })
 export class HeroCreateComponent implements OnInit {
-  hero: {};
+  public hero: any;
 
   constructor(private state: StateService) { }
 
