@@ -1,11 +1,15 @@
 <nav class="navbar navbar-light navbar-expand-lg sticky-top" style="background-color: #563d7c;">
-  <a routerLink="/create" class="text-white navbar-brand" href="javascript:void(0)">P&P Hero</a>
+  <a routerLink="/create" class="text-white navbar-brand" href="javascript:void(0)">
+  <img src="/assets/icons/navbar-icon-30x30.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    P&P Hero
+  </a>
   <span *ngIf="this.hero.details.name" class="navbar-text text-white-50 font-size-0">
     Welcome, {{ this.hero.details.name }}
   </span>
   <ul class="navbar-nav ml-auto">
     <button routerLink="/export" class="btn btn-info">
       <i class="fas fa-upload"></i>
+      Export
     </button>
   </ul>
   <ul class="navbar-nav ml-auto">
@@ -24,5 +28,4 @@
     Made with
     <i class="fas fa-heart text-danger"></i> in Hamburg
   </p>
- {{hero | json}}
 </footer>

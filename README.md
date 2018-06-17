@@ -13,3 +13,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Current State
 ![Image](static/demo.png)
+
+## Credits
+- Navbar Icon via [LINK](https://hero-in-pixels.deviantart.com/art/West-dash-animation-176419267)

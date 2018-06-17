@@ -1,3 +1,17 @@
-<p>
-  hero-export works!
-</p>
+<div class="container mt-3">
+  <form>
+    <div class="form-group">
+      <label for="heroDataForm">
+        <h3>
+          Hero Data<!--  <span class="text-muted font-weight-light h6">save it for importing</span> -->
+        </h3>
+      </label>
+      <textarea class="form-control" id="heroDataForm" rows="10">{{ hero | json }}</textarea>
+    </div>
+    <div>
+      <button (click)="exportHeroToClipboard()" class="btn btn-success">
+        Copy to Clipboard
+      </button>
+    </div>
+  </form>
+</div>
