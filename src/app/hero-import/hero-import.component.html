@@ -1,0 +1,18 @@
+<div class="container mt-3">
+  <form>
+    <div class="form-group">
+      <label for="heroImportForm">
+        <h3>
+          Enter your Hero Data
+           <span class="text-muted font-weight-light h6"> for import</span>
+        </h3>
+      </label>
+      <textarea [(ngModel)]="this.importHeroField" [ngModelOptions]="{standalone: true}" class="form-control" id="heroImportForm" rows="10"></textarea>
+    </div>
+    <div>
+      <button (click)="importHeroToStorage()" class="btn btn-success">
+        Import
+      </button>
+    </div>
+  </form>
+</div>
