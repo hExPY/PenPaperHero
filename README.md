@@ -9,6 +9,7 @@ Currently i'am working on the [Savage Worlds](http://www.savage-run.de/download/
 ## Current Features
 
 - Fully Responsive
+- Saving Hero automatically while editing
 - Export Hero as JSON to save it on your own
 - Saving Hero into Browser Localstorage for persistence
 - Import Hero into Application from exported JSON
