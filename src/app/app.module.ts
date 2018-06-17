@@ -11,9 +11,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { HeroCreateComponent } from './hero-create/hero-create.component';
 import { HeroExportComponent } from './hero-export/hero-export.component';
+import { HeroImportComponent } from './hero-import/hero-import.component';
 
 const appRoutes: Routes = [
   { path: 'export', component: HeroExportComponent },
+  { path: 'import', component: HeroImportComponent },
   { path: 'create', component: HeroCreateComponent },
   { path: '**', redirectTo: "create" }
 ];
@@ -21,7 +23,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HeroCreateComponent,
-    HeroExportComponent
+    HeroExportComponent,
+    HeroImportComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

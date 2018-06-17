@@ -37,18 +37,20 @@ export class StateService {
   }
 
   loadHeroFromStorage() {
-    const tmpHero = JSON.parse(localStorage.getItem(this.localStorageFieldName));
-    if (tmpHero !== null) {
-      console.log("loadHeroFromStorage - Storage Entry found. Loading Hero into app.")
-      this.changeHero(JSON.parse(localStorage.getItem(this.localStorageFieldName)));
-    } else {
+    try {
+      const tmpHero = JSON.parse(localStorage.getItem(this.localStorageFieldName));
+    } catch (err) {
       console.log("loadHeroFromStorage - Storage Entry not found. creating empty one")
       this.saveHeroToStorage();
+    }
+    if (tmpHero) {
+      console.log("loadHeroFromStorage - Storage Entry found. Loading Hero into app.")
+      this.changeHero(JSON.parse(localStorage.getItem(this.localStorageFieldName)));
     }
   }
 
   changeHero(hero) {
-    console.log(hero);
+    console.log("changeHero called...");
     this.heroSource.next(hero);
     this.saveHeroToStorage();
   }
