@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { LocalStorage } from '@ngx-pwa/local-storage';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StateService {
-  constructor() { }
+  constructor(
+    protected localStorage: LocalStorage
+  ) { }
   private heroSource = new BehaviorSubject({
     details: {
       name: "",
@@ -25,7 +28,7 @@ export class StateService {
   saveHeroToStorage() {
     const globalCurrentHero = this.getCurrentHero();
     try {
-      localStorage.setItem(this.localStorageFieldName, JSON.stringify(globalCurrentHero));
+      this.localStorage.setItem(this.localStorageFieldName, globalCurrentHero).subscribe(() => { });
       console.log("Saved", globalCurrentHero, "to Storage");
     } catch (err) {
       console.log("Saving didnt worked", err);
@@ -37,17 +40,15 @@ export class StateService {
   }
 
   loadHeroFromStorage() {
-    let tmpHero;
-    try {
-      tmpHero = JSON.parse(localStorage.getItem(this.localStorageFieldName));
-    } catch (err) {
-      console.log("loadHeroFromStorage - Storage Entry not found. creating empty one")
-      this.saveHeroToStorage();
-    }
-    if (tmpHero) {
-      console.log("loadHeroFromStorage - Storage Entry found. Loading Hero into app.")
-      this.changeHero(JSON.parse(localStorage.getItem(this.localStorageFieldName)));
-    }
+    this.localStorage.getItem(this.localStorageFieldName).subscribe((hero) => {
+      if (hero) {
+        console.log("loadHeroFromStorage - Storage Entry found. Loading Hero into app.");
+        this.changeHero(hero);
+      } else {
+        console.log("loadHeroFromStorage - Storage Entry not found. creating empty one");
+        this.saveHeroToStorage();
+      }
+    });
   }
 
   changeHero(hero) {
@@ -55,5 +56,4 @@ export class StateService {
     this.heroSource.next(hero);
     this.saveHeroToStorage();
   }
-
 }
