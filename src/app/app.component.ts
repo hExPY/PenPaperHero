@@ -11,7 +11,7 @@ import { StateService } from "./state.service";
   providers: [StateService]
 })
 export class AppComponent implements OnInit {
-
+  isNavbarCollapsed = true;
   public hero: any;
 
   constructor(private state: StateService) { }

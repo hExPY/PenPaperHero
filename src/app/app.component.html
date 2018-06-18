@@ -1,23 +1,30 @@
 <nav class="navbar navbar-light navbar-expand-lg sticky-top" style="background-color: #563d7c;">
   <a routerLink="/create" class="text-white navbar-brand" href="javascript:void(0)">
-  <img src="assets/icons/navbar-icon-30x30.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    P&P Hero
+    <img src="assets/icons/navbar-icon-30x30.png" width="30" height="30" class="d-inline-block align-top" alt=""> P&P Hero
   </a>
-  <span *ngIf="this.hero.details.name" class="navbar-text text-white-50 font-size-0">
-    Welcome, {{ this.hero.details.name }}
-  </span>
-  <ul class="navbar-nav ml-auto">
-    <button routerLink="/export" class="btn btn-info">
-      <i class="fas fa-upload"></i>
-      Export
-    </button>
-  </ul>
-  <ul class="navbar-nav ml-auto">
-    <a class="btn btn-warning" routerLink="/import">
-      <i class="fas fa-download"></i> Import
-    </a>
-  </ul>
+  <button style="border-color: grey;" class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="text-white-50"><i class="fas fa-bars"></i></span>
+  </button>
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="Navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <span *ngIf="this.hero.details.name" class="navbar-text text-white-50 mr-5">
+            Welcome, {{ this.hero.details.name }}
+          </span>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link text-white" routerLink="/create" href="javascript:void(0)">Create</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/export" href="javascript:void(0)">Export</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/import" href="javascript:void(0)">Import</a>
+        </li>
+      </ul>
+  </div>
 </nav>
+
 <simple-notifications></simple-notifications>
 <router-outlet>
 </router-outlet>
