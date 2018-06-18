@@ -12,7 +12,7 @@ import { Router } from "@angular/router";
   providers: [StateService]
 })
 export class AppComponent implements OnInit {
-  isNavbarCollapsed = true;
+  public isNavbarCollapsed = true;
   public hero: any;
 
   constructor(

@@ -12,17 +12,67 @@
           </div>
           <div class="col">
             <small class="form-text text-muted">Gender</small>
-            <input (keyup)="onFormChange()"[(ngModel)]="this.hero.details.gender" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Gender">
+            <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.gender" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Gender">
           </div>
         </div>
         <div class="row">
           <div class="col">
             <small class="form-text text-muted">Concept</small>
-            <input (keyup)="onFormChange()"[(ngModel)]="this.hero.details.concept" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Concept">
+            <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.concept" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Concept">
           </div>
           <div class="col">
             <small class="form-text text-muted">Nationality</small>
-            <input (keyup)="onFormChange()"[(ngModel)]="this.hero.details.nationality" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Nationality">
+            <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.nationality" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Nationality">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <small class="form-text text-muted">Fraction</small>
+            <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.fraction" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Fraction">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <small class="form-text text-muted">Loge</small>
+            <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.loge" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Loge">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <small class="form-text text-muted">Rank</small>
+            <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.rank" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Rank">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <small class="form-text text-muted">State</small>
+            <!-- <div [formGroup]="heroStateFormGroup">
+              <div class="btn-group btn-group-toggle" ngbRadioGroup formControlName="model">
+                <label ngbButtonLabel class="btn-secondary pl-3 pr-3">
+                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]="1">1
+                </label>
+                <label ngbButtonLabel class="btn-secondary pl-3 pr-3">
+                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]="2">2
+                </label>
+                <label ngbButtonLabel class="btn-secondary pl-3 pr-3">
+                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]="3">3
+                </label>
+                <label ngbButtonLabel class="btn-secondary pl-3 pr-3">
+                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]="4">4
+                </label>
+                <label ngbButtonLabel class="btn-secondary pl-3 pr-3">
+                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]="5">5
+                </label>
+              </div>
+            </div> -->
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary pl-3 pr-3">1</button>
+              <button type="button" class="btn btn-secondary pl-3 pr-3">2</button>
+              <button type="button" class="btn btn-secondary pl-3 pr-3">3</button>
+              <button type="button" class="btn btn-secondary pl-3 pr-3">4</button>
+              <button type="button" class="btn btn-secondary pl-3 pr-3">5</button>
+            </div>
           </div>
         </div>
       </form>
