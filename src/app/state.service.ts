@@ -15,11 +15,11 @@ export class StateService {
       gender: "",
       concept: "",
       nationality: "",
-      fraction: "",
+      faction: "",
       loge: "",
       rank: "",
       experience: "",
-      state: ""
+      status: ""
     }
   });
   currentHero = this.heroSource.asObservable();
