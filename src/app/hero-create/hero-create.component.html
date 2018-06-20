@@ -27,8 +27,8 @@
         </div>
         <div class="row">
           <div class="col">
-            <small class="form-text text-muted">Fraction</small>
-            <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.fraction" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Fraction">
+            <small class="form-text text-muted">Faction</small>
+            <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.faction" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Faction">
           </div>
         </div>
         <div class="row">
@@ -45,7 +45,7 @@
         </div>
         <div class="row">
           <div class="col">
-            <small class="form-text text-muted">State</small>
+            <small class="form-text text-muted">Status</small>
             <!-- <div [formGroup]="heroStateFormGroup">
               <div class="btn-group btn-group-toggle" ngbRadioGroup formControlName="model">
                 <label ngbButtonLabel class="btn-secondary pl-3 pr-3">
