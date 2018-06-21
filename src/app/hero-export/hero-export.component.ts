@@ -31,8 +31,6 @@ export class HeroExportComponent implements OnInit {
       preventDuplicates: true,
       icons: "alert"
     })
-    // this.toastr.success('Hello world!', 'Toastr fun!');
-
   }
 
 }

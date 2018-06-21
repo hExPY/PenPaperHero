@@ -6,6 +6,13 @@
     <div class="card-body">
       <form>
         <div class="row">
+          <div style="max-width: 313px;" class="col mb-2">
+            <small class="form-text text-muted">Click Image to upload Avatar</small>
+            <img class="img-fluid" (click)="fileInput.click()" [src]=getSantizeUrl()>
+            <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+          </div>
+        </div>
+        <div class="row">
           <div class="col">
             <small class="form-text text-muted">Name</small>
             <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.name" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Name">
@@ -46,32 +53,24 @@
         <div class="row">
           <div class="col">
             <small class="form-text text-muted">Status</small>
-            <!-- <div [formGroup]="heroStateFormGroup">
+            <div [formGroup]="heroStateFormGroup">
               <div class="btn-group btn-group-toggle" ngbRadioGroup formControlName="model">
-                <label ngbButtonLabel class="btn-secondary pl-3 pr-3">
-                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]="1">1
+                <label ngbButtonLabel [ngClass]="ifClassIsActive(1)" class="btn-secondary pl-3 pr-3">
+                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]=1>1
                 </label>
-                <label ngbButtonLabel class="btn-secondary pl-3 pr-3">
-                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]="2">2
+                <label ngbButtonLabel [ngClass]="ifClassIsActive(2)" class="btn-secondary pl-3 pr-3">
+                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]=2>2
                 </label>
-                <label ngbButtonLabel class="btn-secondary pl-3 pr-3">
-                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]="3">3
+                <label ngbButtonLabel [ngClass]="ifClassIsActive(3)" class="btn-secondary pl-3 pr-3">
+                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]=3>3
                 </label>
-                <label ngbButtonLabel class="btn-secondary pl-3 pr-3">
-                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]="4">4
+                <label ngbButtonLabel [ngClass]="ifClassIsActive(4)" class="btn-secondary pl-3 pr-3">
+                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]=4>4
                 </label>
-                <label ngbButtonLabel class="btn-secondary pl-3 pr-3">
-                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]="5">5
+                <label ngbButtonLabel [ngClass]="ifClassIsActive(5)" class="btn-secondary pl-3 pr-3">
+                  <input (change)="onHeroStateFormGroupChange()" ngbButton type="radio" [value]=5>5
                 </label>
               </div>
-            </div> -->
-
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary pl-3 pr-3">1</button>
-              <button type="button" class="btn btn-secondary pl-3 pr-3">2</button>
-              <button type="button" class="btn btn-secondary pl-3 pr-3">3</button>
-              <button type="button" class="btn btn-secondary pl-3 pr-3">4</button>
-              <button type="button" class="btn btn-secondary pl-3 pr-3">5</button>
             </div>
           </div>
         </div>
