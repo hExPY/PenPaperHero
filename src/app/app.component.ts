@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import { ClipboardService } from 'ngx-clipboard';
-// import { NotificationsService } from 'angular2-notifications';
+import { NotificationsService } from 'angular2-notifications';
 import { StateService } from "./state.service";
 import { Router } from "@angular/router";
 
@@ -17,7 +17,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     private state: StateService,
-    private router: Router
+    private router: Router,
+    private notificationsService: NotificationsService
   ) { }
 
   ngOnInit() {
@@ -27,6 +28,16 @@ export class AppComponent implements OnInit {
     })
     this.router.events.subscribe(() => {
       this.isNavbarCollapsed = true;
+    });
+  }
+
+  resetHeroToDefault() {
+    this.state.resetHero();
+    this.isNavbarCollapsed = true;
+    this.notificationsService.success("Hero reset", "successfully", {
+      timeOut: 3000,
+      maxStack: 2,
+      preventDuplicates: true,
     });
   }
 

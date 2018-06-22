@@ -1,7 +1,7 @@
 <div class="container mt-3">
   <div class="card">
     <div class="card-header">
-      Hero Details
+      Details
     </div>
     <div class="card-body">
       <form>
@@ -34,6 +34,18 @@
         </div>
         <div class="row">
           <div class="col">
+            <small class="form-text text-muted">Rank</small>
+            <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.rank" [ngModelOptions]="{standalone: true}" type="text" class="form-control"
+              placeholder="Enter Rank">
+          </div>
+          <div class="col">
+            <small class="form-text text-muted">Experience</small>
+            <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.experience" [ngModelOptions]="{standalone: true}" type="text" class="form-control"
+              placeholder="Enter Experience">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
             <small class="form-text text-muted">Faction</small>
             <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.faction" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Faction">
           </div>
@@ -42,12 +54,6 @@
           <div class="col">
             <small class="form-text text-muted">Loge</small>
             <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.loge" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Loge">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <small class="form-text text-muted">Rank</small>
-            <input (keyup)="onFormChange()" [(ngModel)]="this.hero.details.rank" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Rank">
           </div>
         </div>
         <div class="row">
@@ -72,6 +78,44 @@
                 </label>
               </div>
             </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="card mt-3">
+    <div class="card-header">
+      Attributes<span (click)="addNewAttribute()" class="float-right"><i style="font-size:24px;" class="fas fa-plus-circle text-success"></i></span>
+    </div>
+    <div class="card-body">
+      <form>
+        <div *ngIf="this.hero.attributes.attributes.length == 0">
+          <h1>nothign added yet</h1>
+        </div>
+        <div *ngFor="let attribute of this.hero.attributes.attributes; let i=index" class="row">
+          <div class="col-4">
+            <small class="form-text text-muted">Attribute</small>
+            <input (keyup)="onFormChange()" [(ngModel)]="attribute.name" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Attribute">
+          </div>
+          <div class="col-3">
+            <small class="form-text text-muted">Level</small>
+            <div ngbDropdown>
+              <button class="btn btn-outline-primary" id="dropdownAttribute" ngbDropdownToggle>
+                <span *ngIf="attribute.level.length == 0; else displayLevel">Dice</span>
+                <ng-template #displayLevel>{{ attribute.level }}</ng-template>
+              </button>
+              <div ngbDropdownMenu aria-labelledby="dropdownAttribute">
+                <button *ngFor="let level of this.hero.attributes.available_level" (click)="changeAttributeLevel(i, level)" class="dropdown-item">{{ level }}</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <small class="form-text text-muted">Modifier</small>
+            <input (keyup)="onFormChange()" [(ngModel)]="attribute.modifier" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Enter Modifier">
+          </div>
+          <div class="col-2">
+            <small class="form-text text-muted">Delete</small>
+            <button type="button" (click)="removeAttribute(i)" class="btn btn-danger"><i class="fas fa-ban"></i></button>
           </div>
         </div>
       </form>
