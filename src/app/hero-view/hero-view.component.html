@@ -1,12 +1,18 @@
 <div class="container mt-3">
   <div class="row" >
-    <div class="col">
+    <div class="col-sm-4">
+        <div style="max-width: 313px;" class="col mb-2">
+            <img class="img-fluid rounded" (click)="fileInput.click()" [src]=getSanitizedUrl()>
+            <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+          </div>
+    </div>
+    <div class="col-sm-4">
       <div><small class="text-muted">Name:</small><font class="font-weight-bold"> {{hero.details.name}}</font></div>
       <div><small class="text-muted">Gender:</small> {{hero.details.gender}}</div>
       <div><small class="text-muted">Nationality:</small> {{hero.details.nationality}}</div>
       <div><small class="text-muted">Concept:</small> {{hero.details.concept}}</div>
     </div>
-    <div class="col">
+    <div class="col-sm-4">
       <div><small class="text-muted">Faction:</small> {{hero.details.faction}}</div>
       <div><small class="text-muted">Loge:</small> {{hero.details.loge}}</div>
       <div><small class="text-muted">Rank:</small> {{hero.details.rank}}</div>
@@ -14,10 +20,126 @@
     </div>
   </div>
   <div class="row mt-3">
-    <div class="col-4">
+      <div class="col-sm-6">
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr class="table-info">
+                <th class="text-right" scope="col">Attribute</th>
+                <th class="text-center" scope="col">W4</th>
+                <th class="text-center" scope="col">W6</th>
+                <th class="text-center" scope="col">W8</th>
+                <th class="text-center" scope="col">W10</th>
+                <th class="text-center" scope="col">W12</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-right">
+                  Agility
+                </td>
+                <td class="text-center">
+    
+                </td>
+                <td class="text-center">
+                  
+                </td>
+                <td class="text-center">
+                  
+                </td>
+                <td class="text-center">
+                    
+                </td>
+                <td class="text-center">
+                    <i class="fas fa-times"></i>
+                </td>
+              </tr>
+              <tr>
+                  <td class="text-right">
+                    Smarts
+                  </td>
+                  <td class="text-center">
+      
+                  </td>
+                  <td class="text-center">
+                    
+                  </td>
+                  <td class="text-center">
+                      
+                  </td>
+                  <td class="text-center">
+                      <i class="fas fa-times"></i>
+                  </td>
+                  <td>
+                    
+                  </td>
+                </tr>
+                <tr>
+                    <td class="text-right">
+                      Spirit
+                    </td>
+                    <td class="text-center">
+        
+                    </td>
+                    <td class="text-center">
+                      
+                    </td>
+                    <td class="text-center">
+                        <i class="fas fa-times"></i>
+                    </td>
+                    <td class="text-center">
+                        
+                    </td>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                      <td class="text-right">
+                        Strength
+                      </td>
+                      <td class="text-center">
+          
+                      </td>
+                      <td class="text-center">
+                          <i class="fas fa-times"></i>
+                      </td>
+                      <td class="text-center">
+                          
+                      </td>
+                      <td class="text-center">
+                          
+                      </td>
+                      <td>
+                        
+                      </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">
+                          Vigor
+                        </td>
+                        <td class="text-center">
+                            <i class="fas fa-times"></i>
+                        </td>
+                        <td class="text-center">
+                            
+                        </td>
+                        <td class="text-center">
+                            
+                        </td>
+                        <td class="text-center">
+                            
+                        </td>
+                        <td>
+                          
+                        </td>
+                      </tr>
+            </tbody>
+          </table>
+        </div>
+    <div class="col-sm-6">
       <table class="table table-striped table-sm">
         <thead>
-          <tr>
+          <tr class="table-success">
             <th class="text-center" scope="col">W4</th>
             <th class="text-center" scope="col">W6</th>
             <th class="text-center" scope="col">W8</th>
@@ -67,6 +189,66 @@
                 Healing
               </td>
             </tr>
+            <tr>
+              <td class="text-center">
+  
+              </td>
+              <td class="text-center">
+  
+              </td>
+              <td class="text-center">
+                <i class="fas fa-times"></i>
+              </td>
+              <td class="text-center">
+                
+              </td>
+              <td class="text-center">
+                  
+              </td>
+              <td>
+                Knowledge (Rippertech)
+              </td>
+            </tr>
+            <tr>
+                <td class="text-center">
+    
+                </td>
+                <td class="text-center">
+                  <i class="fas fa-times"></i>
+                </td>
+                <td class="text-center">
+                  
+                </td>
+                <td class="text-center">
+                    
+                </td>
+                <td class="text-center">
+                    
+                </td>
+                <td>
+                  Driving
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <i class="fas fa-times"></i>
+                </td>
+                <td class="text-center">
+                  
+                </td>
+                <td class="text-center">
+                  
+                </td>
+                <td class="text-center">
+                    
+                </td>
+                <td class="text-center">
+                    
+                </td>
+                <td>
+                  Throwing
+                </td>
+              </tr>
         </tbody>
       </table>
     </div>

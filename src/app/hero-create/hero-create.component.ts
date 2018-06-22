@@ -65,7 +65,7 @@ export class HeroCreateComponent implements OnInit {
     this.onFormChange();
   }
 
-  getSantizeUrl() {
+  getSanitizedUrl() {
     return this.sanitizer.bypassSecurityTrustUrl("data:" + this.hero.details.avatar.type + ";base64, " + this.hero.details.avatar.data);
   }
 
