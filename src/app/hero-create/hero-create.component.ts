@@ -69,6 +69,21 @@ export class HeroCreateComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustUrl("data:" + this.hero.details.avatar.type + ";base64, " + this.hero.details.avatar.data);
   }
 
+  addNewAttribute() {
+    this.hero.attributes.attributes.push(Object.assign({}, this.state.heroEmptyAttribute));
+    this.onFormChange();
+  }
+
+  changeAttributeLevel(arrayPosition, diceLevel) {
+    this.hero.attributes.attributes[arrayPosition].level = diceLevel;
+    this.onFormChange();
+  }
+
+  removeAttribute(arrayPosition) {
+    this.hero.attributes.attributes.splice(arrayPosition,1);
+    this.onFormChange();
+  }
+
   onFormChange() {
     this.state.changeHero(this.hero);
   }
