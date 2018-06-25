@@ -1,0 +1,62 @@
+{
+  "configVersion": 1,
+  "index": "https://hexpy.github.io/PenPaperHero/PenPaperHero/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://hexpy.github.io/PenPaperHero/assets/icons/icon-128x128.png",
+        "https://hexpy.github.io/PenPaperHero/assets/icons/icon-144x144.png",
+        "https://hexpy.github.io/PenPaperHero/assets/icons/icon-152x152.png",
+        "https://hexpy.github.io/PenPaperHero/assets/icons/icon-192x192.png",
+        "https://hexpy.github.io/PenPaperHero/assets/icons/icon-384x384.png",
+        "https://hexpy.github.io/PenPaperHero/assets/icons/icon-512x512.png",
+        "https://hexpy.github.io/PenPaperHero/assets/icons/icon-72x72.png",
+        "https://hexpy.github.io/PenPaperHero/assets/icons/icon-96x96.png",
+        "https://hexpy.github.io/PenPaperHero/assets/icons/navbar-icon-30x30.png",
+        "https://hexpy.github.io/PenPaperHero/assets/loader.gif"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://hexpy.github.io/PenPaperHero/assets/icons/icon-128x128.png": "a2a3c395447186abeec663e19425004b8f39190a",
+    "https://hexpy.github.io/PenPaperHero/assets/icons/icon-144x144.png": "c8dc714fe93ea2913af3bffa94cae3e445828ef2",
+    "https://hexpy.github.io/PenPaperHero/assets/icons/icon-152x152.png": "fd3bb6a7cd7fdecb1789b587ee4fc8ed95de95c3",
+    "https://hexpy.github.io/PenPaperHero/assets/icons/icon-192x192.png": "ca87edb0b0f266423f161cec75499fe18eadcfac",
+    "https://hexpy.github.io/PenPaperHero/assets/icons/icon-384x384.png": "db5f4c5ab895f8ea9157730de29eb188a910c974",
+    "https://hexpy.github.io/PenPaperHero/assets/icons/icon-512x512.png": "f05a690f595a2c5582512c35590a9d3afc133ed3",
+    "https://hexpy.github.io/PenPaperHero/assets/icons/icon-72x72.png": "dadf02a3010be6528b2f14bd265ca251c69abe95",
+    "https://hexpy.github.io/PenPaperHero/assets/icons/icon-96x96.png": "f295398ac5d814a7d32ec7a934be9af220b10d57",
+    "https://hexpy.github.io/PenPaperHero/assets/icons/navbar-icon-30x30.png": "4d678983c5858dd2be5dfc5d9798ea0871b6f90f",
+    "https://hexpy.github.io/PenPaperHero/assets/loader.gif": "8c9c411987022019d1614f23f60a40b903650ac3"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*\\.[^\\/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*\\/.*$"
+    }
+  ]
+}
