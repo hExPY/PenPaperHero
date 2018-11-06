@@ -53,7 +53,7 @@ export class HeroCreateComponent implements OnInit {
         reader.readAsDataURL(file);
         reader.onload = () => {
           this.hero.details.avatar.type = file.type;
-          this.hero.details.avatar.data = reader.result.split(',')[1];
+          this.hero.details.avatar.data = String(reader.result).split(",")[1];
           this.onFormChange();
         };
       }

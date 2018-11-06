@@ -9,11 +9,13 @@ export class StateService {
   constructor(
     protected localStorage: LocalStorage
   ) { }
+
   public heroEmptyAttribute = {
     "name": "",
     "level": "",
     "modifier": ""
   };
+
   private baseHero = {
     attributes: {
       available_level: ["Dice 4", "Dice 6", "Dice 8", "Dice 10", "Dice 12"],
@@ -35,6 +37,7 @@ export class StateService {
       }
     }
   };
+
   private heroSource = new BehaviorSubject(Object.assign({}, this.baseHero));
   currentHero = this.heroSource.asObservable();
   localStorageFieldName = "PnP-Hero"
